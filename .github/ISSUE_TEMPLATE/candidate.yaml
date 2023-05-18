@@ -1,0 +1,59 @@
+name: Candidate
+description: Propose your candidature
+title: "[Candidate]: "
+labels: ["Candidate"]
+
+body:
+  - type: input
+    id: cv
+    attributes:
+      label: CV
+      placeholder: https://example.com/cv.pdf
+  - type: input
+    id: contact
+    attributes:
+      label: Contact
+      placeholder: email or messenger
+  - type: dropdown
+    id: type
+    validations:
+      required: true
+    attributes:
+      label: Type
+      multiple: true
+      options:
+        - full-time
+        - part-time
+        - project
+        - bounty
+  - type: dropdown
+    id: Category
+    validations:
+      required: true
+    attributes:
+      label: Category
+      options:
+        - engineering
+        - design
+        - support
+        - tester
+        - research
+        - other
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: country:city
+  - type: checkboxes
+    id: option
+    attributes:
+      label: Options
+      options:
+        - label: Remote
+        - label: Relocation
+  - type: textarea
+    attributes:
+      label: "Brief"
+      description: "Describe brief information about you and your expectations"
+    validations:
+      required: True

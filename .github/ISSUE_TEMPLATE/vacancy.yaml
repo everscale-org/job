@@ -1,0 +1,56 @@
+name: Vacancy
+description: Propose your vacancy
+title: "[Vacancy]: "
+labels: ["Vacancy"]
+
+body:
+  - type: input
+    id: project
+    validations:
+      required: true
+    attributes:
+      label: Project
+      placeholder: https://example.com
+  - type: dropdown
+    id: type
+    validations:
+      required: true
+    attributes:
+      label: Type
+      multiple: true
+      options:
+        - full-time
+        - part-time
+        - project
+        - bounty
+  - type: dropdown
+    id: Category
+    validations:
+      required: true
+    attributes:
+      label: Category
+      options:
+        - engineering
+        - design
+        - support
+        - tester
+        - research
+        - other
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: country:city
+  - type: checkboxes
+    id: option
+    attributes:
+      label: Options
+      options:
+        - label: Remote
+        - label: Relocation
+  - type: textarea
+    attributes:
+      label: "Brief"
+      description: "Describe a brief of vacancy"
+    validations:
+      required: True
