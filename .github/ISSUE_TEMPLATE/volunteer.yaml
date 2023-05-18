@@ -35,6 +35,7 @@ body:
         - support
         - tester
         - research
+        - writer
         - other
   - type: input
     id: location
